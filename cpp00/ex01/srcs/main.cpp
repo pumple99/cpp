@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/21 19:18:35 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/06/22 17:59:20 by seunghoy         ###   ########.fr       */
+/*   Created: 2023/06/22 16:33:30 by seunghoy          #+#    #+#             */
+/*   Updated: 2023/06/22 23:52:28 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
+#include <string>
+#include <iostream>
 
-# include "Contact.hpp"
+#include "PhoneBook.hpp"
 
-class PhoneBook
+int	main(void)
 {
-private:
-	Contact _contact[8];
-	int		_insertPos;
-	int		_contactCount;
-public:
-	PhoneBook();
-	void	AddPhoneBook();
-	void	SearchPhoneBook();
-};
-
-#endif
+	PhoneBook	phoneBook;
+	std::string	command;
+	while (true)
+	{
+		std::cout << "Input the command(ADD, SEARCH, EXIT): ";
+		std::getline(std::cin, command);
+		if (command == "EXIT")
+			return (0);
+		if (command == "")
+			std::cout << "hi";
+		std::cin.clear();
+	}
+}
