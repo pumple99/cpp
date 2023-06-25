@@ -6,13 +6,14 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 19:18:35 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/06/22 17:59:20 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/06/25 21:18:54 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONE_BOOK_HPP
 # define PHONE_BOOK_HPP
 
+# include <string>
 # include "Contact.hpp"
 
 class PhoneBook
@@ -23,8 +24,9 @@ private:
 	int		_contactCount;
 public:
 	PhoneBook();
-	void	AddPhoneBook();
-	void	SearchPhoneBook();
+	void		AddPhoneBook();
+	void		SearchPhoneBook();
+	static int	OutAndIn(const std::string out, std::string& in);
 };
 
 #endif

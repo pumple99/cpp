@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 16:33:30 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/06/22 23:52:28 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/06/25 20:57:16 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,17 @@ int	main(void)
 {
 	PhoneBook	phoneBook;
 	std::string	command;
-	while (true)
+	while (std::cin.good())
 	{
 		std::cout << "Input the command(ADD, SEARCH, EXIT): ";
 		std::getline(std::cin, command);
-		if (command == "EXIT")
+		if (!std::cin.good())
+			std::cout << "Error or EOF detected at cin." << std::endl;
+		else if (command == "EXIT")
 			return (0);
-		if (command == "")
-			std::cout << "hi";
-		std::cin.clear();
+		else if (command == "ADD")
+			phoneBook.AddPhoneBook();
+		else if (command == "SEARCH")
+			phoneBook.SearchPhoneBook();
 	}
 }
