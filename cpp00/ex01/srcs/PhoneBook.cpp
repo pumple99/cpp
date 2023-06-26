@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 19:06:48 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/06/25 21:19:04 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/06/26 19:46:30 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ void	PhoneBook::AddPhoneBook(void)
 {
 	std::string	contactInfo[5];
 
-	if (OutAndIn(std::string("Input first name: "), contactInfo[0]) || \
-	OutAndIn(std::string("Input last name: "), contactInfo[1]) || \
-	OutAndIn(std::string("Input nick name: "), contactInfo[2]) || \
-	OutAndIn(std::string("Input phone number: "), contactInfo[3]) || \
-	OutAndIn(std::string("Input darkest secret: "), contactInfo[4]))
+	if (PhoneBook::OutAndIn(std::string("Input first name: "), contactInfo[0]) || \
+	PhoneBook::OutAndIn(std::string("Input last name: "), contactInfo[1]) || \
+	PhoneBook::OutAndIn(std::string("Input nick name: "), contactInfo[2]) || \
+	PhoneBook::OutAndIn(std::string("Input phone number: "), contactInfo[3]) || \
+	PhoneBook::OutAndIn(std::string("Input darkest secret: "), contactInfo[4]))
 		return ;
 		
 	this->_contact[this->_insertPos].SetContact(contactInfo, \
@@ -66,11 +66,13 @@ void	PhoneBook::SearchPhoneBook(void)
 
 	while (std::cin.good())
 	{
-		OutAndIn("Input index to search: ", idx);
-		index = idx.at(0) - '0';
-		if (idx.size() == 1 && 0 < index && index <= this->_contactCount)
-			break ;
-		std::cout << "Wrong index, try again" << std::endl;
+		if (!PhoneBook::OutAndIn("Input index to search: ", idx))
+		{
+			index = idx.at(0) - '0';
+			if (idx.size() == 1 && 0 < index && index <= this->_contactCount)
+				break ;
+			std::cout << "Wrong index, try again" << std::endl;
+		}
 	}
 	if (std::cin.good())
 		this->_contact[index - 1].ShowAll();

@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 19:52:56 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/06/25 21:22:16 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/06/26 19:39:29 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ private:
 	std::string _darkest_secret;
 
 public:
-	void		SetContact(const std::string str[], int index);
 	static void	TruncateAlignPrint(const std::string& str);
+	
+	void		SetContact(const std::string str[], int index);
 	void		Preview(void);
 	void		ShowAll(void);
 };

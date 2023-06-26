@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 19:18:35 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/06/25 21:18:54 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/06/26 19:41:09 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ private:
 	int		_contactCount;
 public:
 	PhoneBook();
+
+	static int	OutAndIn(const std::string out, std::string& in);
+	
 	void		AddPhoneBook();
 	void		SearchPhoneBook();
-	static int	OutAndIn(const std::string out, std::string& in);
 };
 
 #endif
