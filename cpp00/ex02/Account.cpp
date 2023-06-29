@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 15:39:17 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/06/26 20:54:21 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/06/26 21:50:42 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ void	Account::_displayTimestamp( void )
 	std::time_t now = std::time(0);
     std::tm* timeInfo = std::localtime(&now);
 
-    char buffer[19];
+    char buffer[20];
 
     std::strftime(buffer, sizeof(buffer), "[%Y%m%d_%H%M%S] ", timeInfo);
     std::cout << buffer;
