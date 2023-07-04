@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/29 15:10:01 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/07/04 16:38:49 by seunghoy         ###   ########.fr       */
+/*   Created: 2023/07/04 16:36:08 by seunghoy          #+#    #+#             */
+/*   Updated: 2023/07/04 17:26:54 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include <iostream>
+#include "../Zombie.hpp"
 
-# include <string>
-
-class Zombie
+int main(void)
 {
-private:
-	std::string	name;
+	std::cout << "------- make zombie with 3 ways -------" << std::endl;
+	Zombie *aa = newZombie("aa");
+	randomChump("bb");
+	Zombie cc = Zombie("cc");
 
-public:
-	Zombie(std::string name);
-	~Zombie();
+	std::cout << "------- use announce to aa and cc -------" << std::endl;
+	aa->announce();
+	cc.announce();
 
-	void	announce( void );
-};
-
-Zombie*	newZombie( std::string name );
-void	randomChump( std::string name);
-
-#endif
+	std::cout << "------------ delete aa -----------" << std::endl;
+	delete aa;
+}

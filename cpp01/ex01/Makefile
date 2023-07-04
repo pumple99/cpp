@@ -6,11 +6,11 @@
 #    By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 15:20:31 by seunghoy          #+#    #+#              #
-#    Updated: 2023/07/04 17:03:30 by seunghoy         ###   ########.fr        #
+#    Updated: 2023/07/04 21:20:42 by seunghoy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := cpp01_00
+NAME := cpp01_01
 CC := c++
 CFLAGS := -Werror -Wall -Wextra -std=c++98
 DEBUG_FLAGS := #-g
@@ -19,7 +19,7 @@ OBJS_DIR := objs
 
 CHANGABLE_HEADERS = Zombie.hpp
 
-SRCS := $(addprefix $(SRCS_DIR)/, main.cpp newZombie.cpp randomChump.cpp Zombie.cpp)
+SRCS := $(addprefix $(SRCS_DIR)/, main.cpp zombieHorde.cpp Zombie.cpp)
 
 OBJS := $(SRCS:$(SRCS_DIR)/%.cpp=$(OBJS_DIR)/%.o)
 
