@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/29 15:17:22 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/07/05 15:36:50 by seunghoy         ###   ########.fr       */
+/*   Created: 2023/07/05 16:24:47 by seunghoy          #+#    #+#             */
+/*   Updated: 2023/07/05 17:22:27 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include <string>
-#include "../Zombie.hpp"
+#include <iostream>
+#include "HumanB.hpp"
 
-Zombie::Zombie()
-{
-	std::cout << "Generate anonymous zombie" << std::endl;
-}
-
-Zombie::Zombie(std::string name)
+HumanB::HumanB(std::string name)
 {
 	this->name = name;
-	std::cout << "Generate zombie: " << name << std::endl;
+	this->weapon = 0;
 }
 
-Zombie::~Zombie()
+void	HumanB::setWeapon(Weapon& weapon)
 {
-	std::cout << this->name << " died!" << std::endl;
+	this->weapon = &weapon;
 }
 
-void	Zombie::announce( void )
+void	HumanB::attack(void)
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-void	Zombie::setName(std::string& name)
-{
-	this->name = name;
+	if (this->weapon == 0)
+		std::cout << this->name << " attacks with their bare hand!" << std::endl;
+	else
+		std::cout << this->name << " attacks with their " << \
+		this->weapon->getType() << std::endl;
 }

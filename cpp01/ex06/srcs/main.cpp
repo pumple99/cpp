@@ -6,28 +6,47 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 16:36:08 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/07/05 15:50:14 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/07/05 21:44:20 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../Zombie.hpp"
+#include <string>
+#include "../Harl.hpp"
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	int zomNum = 5;
-	std::cout << "-------- create zombies ---------" << std::endl;
-	Zombie *zom0 = new Zombie("zom0");
-	Zombie zom1;
-	Zombie *zoms = zombieHorde(zomNum, "zoms");
-
-	std::cout << "--------- announce zombies ----------" << std::endl;
-	zom0->announce();
-	zom1.announce();
-	for (int i = 0; i < zomNum; i++)
-		zoms[i].announce();
+	if (argc != 2)
+		return (std::cout << "Error: need one argument" << std::endl, 1);
 	
-	std::cout << "----------- delete zombies ------------" <<std::endl;
-	delete [] zoms;
-	delete zom0;
+	int	harlValue = 4;
+	std::string harls[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	for (size_t i = 0; i < 4; i++)
+	{
+		if (harls[i] == std::string(argv[1]))
+			harlValue = i;
+	}
+	
+	Harl harl;
+
+	switch (harlValue)
+	{
+	case 0:
+		harl.complain("DEBUG");
+		
+	case 1:
+		harl.complain("INFO");
+
+	case 2:
+		harl.complain("WARNING");
+
+	case 3:
+		harl.complain("ERROR");
+		break ;
+	
+	default:
+		std::cout << "[ Probably complaining about insignificant problems ]" \
+		<< std::endl;
+		break;
+	}
 }
