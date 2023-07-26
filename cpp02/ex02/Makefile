@@ -6,14 +6,14 @@
 #    By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 15:20:31 by seunghoy          #+#    #+#              #
-#    Updated: 2023/07/26 11:03:04 by seunghoy         ###   ########.fr        #
+#    Updated: 2023/07/26 11:03:15 by seunghoy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := cpp02_00
+NAME := cpp02_02
 CXX := c++
 CXXFLAGS := -Werror -Wall -Wextra -std=c++98
-DEBUG_FLAGS := #-g
+DEBUG_FLAGS := -g
 
 CHANGABLE_HEADERS = Fixed.hpp
 

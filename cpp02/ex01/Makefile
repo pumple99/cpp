@@ -6,7 +6,7 @@
 #    By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 15:20:31 by seunghoy          #+#    #+#              #
-#    Updated: 2023/07/26 00:02:28 by seunghoy         ###   ########.fr        #
+#    Updated: 2023/07/26 11:03:30 by seunghoy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ $(NAME) : $(OBJS) $(CHANGABLE_HEADERS)
 
 all : $(NAME)
 
-$(OBJS_DIR)/%.o : $(SRCS_DIR)/%.cpp
+%.o : %.cpp
 	$(CXX) $(CXXFLAGS) -I. -c $< $(DEBUG_FLAGS) -o $@
 
 clean :
