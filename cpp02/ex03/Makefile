@@ -6,14 +6,14 @@
 #    By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 15:20:31 by seunghoy          #+#    #+#              #
-#    Updated: 2023/07/26 20:18:44 by seunghoy         ###   ########.fr        #
+#    Updated: 2023/07/28 20:37:59 by seunghoy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := bsp
 CXX := c++
 CXXFLAGS := -Werror -Wall -Wextra -std=c++98
-DEBUG_FLAGS := -g
+DEBUG_FLAGS := #-g
 
 CHANGABLE_HEADERS = Fixed.hpp Point.hpp
 

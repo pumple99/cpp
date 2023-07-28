@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 16:55:08 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/07/26 10:33:20 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/07/28 20:08:33 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int	main()
 {
 	Fixed a;
-	Fixed const b( -12 );
+	Fixed const b( 10 );
 	Fixed const c( 42.42f );
 	Fixed const d( b );
 
