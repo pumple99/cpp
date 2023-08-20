@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 22:46:08 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/08/08 22:59:56 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/08/20 16:38:14 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,16 @@ private:
 	unsigned int	_energyPoint;
 	unsigned int	_attackDamage;
 public:
+	ClapTrap();
 	ClapTrap(std::string& str);
 	~ClapTrap();
+
+	ClapTrap&	operator = (const ClapTrap& p);
 
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
+	void	clapTrapStatus();
 };
 
 #endif
