@@ -6,21 +6,22 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 16:05:39 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/09/26 18:43:31 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/12/24 21:20:48 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
 	std::string name("n");
 
-	ClapTrap d;
+	ScavTrap d;
 	ClapTrap n(name);
+
 
 	name = "c";
 	ClapTrap for_copy(name);

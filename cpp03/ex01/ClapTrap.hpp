@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 22:46:08 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/09/26 18:34:35 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/12/24 21:21:51 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string		_name;
 	unsigned int	_hp;
 	unsigned int	_energyPoint;

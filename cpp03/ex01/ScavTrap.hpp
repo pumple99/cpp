@@ -6,9 +6,12 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 19:48:16 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/09/26 20:35:45 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/12/24 21:07:19 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 #include <string>
 #include "ClapTrap.hpp"
@@ -25,5 +28,8 @@ public:
 	
 	ScavTrap&	operator = (const ScavTrap& st);
 
-	void guardGate();
+	void	attack(const std::string& target);
+	void	guardGate();
 };
+
+#endif

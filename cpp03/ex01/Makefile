@@ -6,7 +6,7 @@
 #    By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 15:20:31 by seunghoy          #+#    #+#              #
-#    Updated: 2023/09/26 18:52:10 by seunghoy         ###   ########.fr        #
+#    Updated: 2023/12/24 21:20:00 by seunghoy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ CXX := c++
 CXXFLAGS := -Werror -Wall -Wextra -std=c++98
 DEBUG_FLAGS := -g
 
-CHANGABLE_HEADERS = ClapTrap.hpp
+CHANGABLE_HEADERS = ClapTrap.hpp ScavTrap.hpp
 
-SRCS := main.cpp ClapTrap.cpp
+SRCS := main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJS := $(SRCS:%.cpp=%.o)
 

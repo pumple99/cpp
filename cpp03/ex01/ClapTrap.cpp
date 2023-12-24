@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 22:52:45 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/09/26 18:39:31 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/12/24 21:00:29 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,20 +86,13 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->_energyPoint)
+	if (!this->_hp)
+		std::cout << "ClapTrap: " << this->_name << " is already dead.." << std::endl;
+	else if (this->_energyPoint)
 	{
-		if (this->_hp)
-		{
-			std::cout << "ClapTrap: " << this->_name << " repairs ";
-			std::cout << amount << " hit points" << std::endl;
-			this->_hp += amount;
-		}
-		else
-		{
-			std::cout << "ClapTrap: " << this->_name << " has been revied with ";
-			std::cout << amount << " hit points" << std::endl;
-			this->_hp = amount;
-		}
+		std::cout << "ClapTrap: " << this->_name << " repairs ";
+		std::cout << amount << " hit points" << std::endl;
+		this->_hp += amount;
 		--this->_energyPoint;
 	}
 	else
