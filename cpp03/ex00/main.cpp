@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 16:05:39 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/09/26 18:43:31 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/12/24 20:17:44 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,14 @@ int main()
 	d.attack(name);
 
 	name = "some";
-	n.takeDamage(200);
+	n.takeDamage(2);
 	n.attack(name);
 
-	n.beRepaired(30);
 	d.beRepaired(10);
 
 	c = n;
+
+	n.takeDamage(19);
 
 	name = "anywhere";
 	for (int i = 0; i < 10; i++)
