@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 22:52:45 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/12/24 20:01:45 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/12/30 18:24:04 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	this->clapTrapStatus();
 }
 
-void	ClapTrap::clapTrapStatus()
+void	ClapTrap::clapTrapStatus() const
 {
 	std::cout << this->_name << ": HP = " << this->_hp;
 	std::cout << ", EP = " << this->_energyPoint << '\n' << std::endl;

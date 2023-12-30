@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 22:46:08 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/09/26 18:34:35 by seunghoy         ###   ########.fr       */
+/*   Updated: 2023/12/30 18:24:22 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
-	void	clapTrapStatus();
+	void	clapTrapStatus() const;
 };
 
 #endif
