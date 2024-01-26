@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 16:05:39 by seunghoy          #+#    #+#             */
-/*   Updated: 2023/12/30 21:20:24 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/22 17:23:03 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,34 +17,33 @@
 
 int main()
 {
-	std::string name("nameS");
+	std::string name("n");
 
-	ScavTrap defaultS;
-	ScavTrap nameS(name);
+	ScavTrap d;
+	ScavTrap n(name);
 
 
-	name = "copy";
+	name = "c";
 	ScavTrap for_copy(name);
-	ScavTrap copy(for_copy);
+	ScavTrap c(for_copy);
 
 	std::cout << "\n#######################\n" << std::endl;
 
-	defaultS.attack(name);
+	d.attack(name);
 
 	name = "some";
-	nameS.takeDamage(200);
-	nameS.attack(name);
+	n.takeDamage(200);
+	n.attack(name);
 
-	nameS.beRepaired(30);
-	defaultS.beRepaired(10);
-
-	copy = nameS;
-
+	c.trapStatus();
 	
-	copy.beRepaired(10);
-	copy.takeDamage(3);
-	nameS.guardGate();
-	defaultS.guardGate();
+	c = n;
+
+	c.trapStatus();
+	n.trapStatus();
+	
+	d.guardGate();
+	c.guardGate();
 
 	std::cout << "#######################\n" << std::endl;
 }

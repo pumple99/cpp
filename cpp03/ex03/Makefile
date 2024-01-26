@@ -6,18 +6,18 @@
 #    By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 15:20:31 by seunghoy          #+#    #+#              #
-#    Updated: 2023/12/30 21:40:23 by seunghoy         ###   ########.fr        #
+#    Updated: 2024/01/22 16:12:36 by seunghoy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := cpp03_02
+NAME := cpp03_03
 CXX := c++
 CXXFLAGS := -Werror -Wall -Wextra -std=c++98
 DEBUG_FLAGS := -g
 
-CHANGABLE_HEADERS = ClapTrap.hpp FragTrap.hpp ScavTrap.hpp
+CHANGABLE_HEADERS = ClapTrap.hpp FragTrap.hpp ScavTrap.hpp DiamondTrap.hpp
 
-SRCS := main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp
+SRCS := main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp DiamondTrap.cpp
 
 OBJS := $(SRCS:%.cpp=%.o)
 

@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 22:52:45 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/22 11:18:42 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:41:04 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,30 @@
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap()
-: _name("default"), _hp(10), _energyPoint(10), _attackDamage(0)
+: ClapTrap(), ScavTrap(), FragTrap(), _name("defalut")
 {
-	std::cout << "generate  default DiamondTrap: " << _name << std::endl;
+	this->ClapTrap::_name = this->_name + "_clap_name";
+	this->_energyPoint = 50;
+	std::cout << "generate default DiamondTrap: " << this->_name << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string& str)
-: _name(str), _hp(10), _energyPoint(10), _attackDamage(0)
+: ClapTrap(str), ScavTrap(str), FragTrap(str), _name(str)
 {
-	std::cout << "generate named DiamondTrap: " << _name << std::endl;
+	this->ClapTrap::_name = this->_name + "_clap_name";
+	this->_energyPoint = 50;
+	std::cout << "generate named DiamondTrap: " << this->_name << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& ct)
-: _name(ct._name), _hp(ct._hp), _energyPoint(ct._energyPoint), \
-_attackDamage(ct._attackDamage)
+DiamondTrap::DiamondTrap(const DiamondTrap& dt)
+: ClapTrap(dt), ScavTrap(dt), FragTrap(dt), _name(dt._name)
 {
-	std::cout << "copy generate DiamondTrap: " << _name << std::endl;
+	std::cout << "copy generate DiamondTrap: " << this->_name << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "destory DiamondTrap: " << _name << std::endl;
+	std::cout << "destory DiamondTrap: " << this->_name << std::endl;
 }
 
 DiamondTrap&	DiamondTrap::operator = (const DiamondTrap& p)
@@ -45,6 +48,7 @@ DiamondTrap&	DiamondTrap::operator = (const DiamondTrap& p)
 	if (this != &p)
 	{
 		this->_name = p._name;
+		this->ClapTrap::_name = p.ClapTrap::_name;
 		this->_hp = p._hp;
 		this->_energyPoint = p._energyPoint;
 		this->_attackDamage = p._attackDamage;
@@ -52,7 +56,12 @@ DiamondTrap&	DiamondTrap::operator = (const DiamondTrap& p)
 	return (*this);
 }
 
-
+void	DiamondTrap::whoAmI()
+{
+	std::cout << "Who am I?" << std::endl;
+	std::cout << "name: " << this->_name << std::endl;
+	std::cout << "claptrap name: " << this->ClapTrap::_name << std::endl;
+}
 
 void	DiamondTrap::trapStatus() const
 {
