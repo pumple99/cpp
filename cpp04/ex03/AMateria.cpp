@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:59:39 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/27 11:48:38 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/27 13:44:37 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,11 @@ AMateria::AMateria(): _type("default")
 	std::cout << "This constructor will never userd.." << std::endl;
 }
 
-AMateria::AMateria(std::string const & type): _type(type)
-{
-	std::cout << "AMateria naming constructor called" << std::endl;
-}
+AMateria::AMateria(std::string const & type): _type(type) {}
 
-AMateria::AMateria(const AMateria& o): _type(o._type)
-{
-	std::cout << "AMateria copy constructor called" << std::endl;
-}
+AMateria::AMateria(const AMateria& o): _type(o._type) {}
 
-AMateria::~AMateria()
-{
-	std::cout << "AMateria destructor called" << std::endl;
-}
+AMateria::~AMateria() {}
 
 AMateria&	AMateria::operator = (const AMateria& other)
 {

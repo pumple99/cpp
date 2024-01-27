@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:05:09 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/27 11:55:56 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/27 13:44:55 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,11 @@
 
 #include "Cure.hpp"
 
-Cure::Cure(): AMateria("cure")
-{
-	std::cout << "Cure default constructor called" << std::endl;
-}
+Cure::Cure(): AMateria("cure") {}
 
-Cure::Cure(const Cure& o): AMateria(o)
-{
-	std::cout << "Cure copy constructor called" << std::endl;
-}
+Cure::Cure(const Cure& o): AMateria(o) {}
 
-Cure::~Cure()
-{
-	std::cout << "Cure destructor called" << std::endl;
-}
+Cure::~Cure() { std::cout << "Cure destructor called" << std::endl; }
 
 Cure&	Cure::operator = (const Cure& other)
 {
