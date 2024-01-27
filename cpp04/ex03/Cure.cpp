@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:05:09 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/27 13:44:55 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/27 15:12:35 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ Cure*	Cure::clone() const { return new Cure(); }
 
 void	Cure::use(ICharacter& target)
 {
-	std::cout << "Cure: \"* heals " << target.getName() << "'s ";
-	std::cout << "wounds *\"" << std::endl;
+	std::cout << "* heals " << target.getName() << "'s ";
+	std::cout << "wounds *" << std::endl;
 }

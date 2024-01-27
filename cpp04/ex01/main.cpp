@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 09:46:59 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/25 14:45:04 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/27 15:27:47 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
+void	check_leaks() { system("leaks cpp04_01"); }
+
 int main()
 {
+	atexit(check_leaks);
 	// Animal a; instantiable
 
 	std::cout << "#################### given test #####################\n\n\n\n";
