@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 09:46:59 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/24 14:23:47 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/27 18:35:12 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,10 @@ int main()
 	std::cout << i->getType() << " " << std::endl;
 	wi->makeSound(); //will output the cat sound! 
     wmeta->makeSound();
+
+	delete meta;
+	delete j;
+	delete i;
+
 	return 0;
 }
