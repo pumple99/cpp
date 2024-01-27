@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:05:09 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/26 20:49:56 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/27 11:55:56 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "Cure.hpp"
 
-Cure::Cure(): AMateria("Cure")
+Cure::Cure(): AMateria("cure")
 {
 	std::cout << "Cure default constructor called" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:58:13 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/26 20:39:57 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/27 11:39:10 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <string>
 
-#include "ICharacter.hpp"
+class ICharacter;
 
 class AMateria
 {

@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:03:27 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/26 20:10:35 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/27 11:59:45 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string>
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class Ice: public AMateria
 {
@@ -28,6 +29,7 @@ public:
 	Ice& operator = (const Ice& o);
 
 	Ice*	clone() const;
+	void	use(ICharacter& target);
 };
 
 

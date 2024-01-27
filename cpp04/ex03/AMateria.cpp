@@ -6,13 +6,14 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:59:39 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/26 20:45:33 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/27 11:48:38 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 AMateria::AMateria(): _type("default")
 {

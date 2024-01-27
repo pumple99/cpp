@@ -6,7 +6,7 @@
 /*   By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:05:09 by seunghoy          #+#    #+#             */
-/*   Updated: 2024/01/26 20:02:32 by seunghoy         ###   ########.fr       */
+/*   Updated: 2024/01/27 11:58:47 by seunghoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,8 @@ Ice&	Ice::operator = (const Ice& other)
 }
 
 Ice*	Ice::clone() const { return new Ice(); }
+
+void	Ice::use(ICharacter& target)
+{
+	std::cout << "Ice: \"* shoots an ice bolt at " << target.getName() << " *\"" << std::endl;
+}

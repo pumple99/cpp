@@ -6,7 +6,7 @@
 #    By: seunghoy <seunghoy@student.42.kr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 15:20:31 by seunghoy          #+#    #+#              #
-#    Updated: 2024/01/26 20:07:51 by seunghoy         ###   ########.fr        #
+#    Updated: 2024/01/27 11:49:28 by seunghoy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,9 @@ DEBUG_FLAGS := -g
 
 CHANGABLE_HEADERS = AMateria.hpp Ice.hpp Cure.hpp \
 					ICharacter.hpp IMateriaSource.hpp \
+					Character.hpp MateriaSource.hpp
 
-SRCS := main.cpp AMateria.cpp Ice.cpp Cure.cpp
+SRCS := main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp
 
 OBJS := $(SRCS:%.cpp=%.o)
 
